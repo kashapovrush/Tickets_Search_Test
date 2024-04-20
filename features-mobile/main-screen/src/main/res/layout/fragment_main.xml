@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.MainFragment">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_marginTop="54dp"
+            android:layout_width="172dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="@string/finding_cheap_flights"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            />
+        
+        <LinearLayout
+            android:layout_marginTop="24dp"
+            android:layout_width="328dp"
+            android:layout_height="122dp"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:background="@drawable/background_input_search_text"
+            >
+            
+            <LinearLayout
+                android:layout_width="296dp"
+                android:layout_height="90dp"
+                android:gravity="center_vertical"
+                android:background = "@drawable/background_input_inner"
+                >
+                
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:src="@drawable/search_icon"/>
+
+
+                <LinearLayout
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <EditText
+                        android:id="@+id/et_from"
+                        android:layout_width="232dp"
+                        android:layout_height="32dp"
+                        android:hint="@string/hint_from"
+                        android:textSize="16sp"
+                        android:background="@null"
+                        android:textStyle="bold"
+                        android:inputType="text"
+                        android:textColorHint="@color/grey6"
+                        android:textColor="@color/white"
+                        android:drawableEnd="@drawable/close_icon"
+                        />
+                    <View
+                        android:layout_width="232dp"
+                        android:layout_height="1dp"
+                        android:background="@color/grey5"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_to"
+                        android:layout_width="232dp"
+                        android:layout_height="32dp"
+                        android:hint="@string/hint_to"
+                        android:textSize="16sp"
+                        android:background="@null"
+                        android:inputType="text"
+                        android:textColorHint="@color/grey6"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:drawableEnd="@drawable/close_icon"
+                        />
+                </LinearLayout>
+                
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/text_offers"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:text="@string/flight_with_music"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_flight_with_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            tools:listitem="@layout/item_offers"
+            android:visibility="visible"
+            />
+        
+        <LinearLayout
+            android:id="@+id/fast_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:layout_marginHorizontal="16dp"
+            >
+            
+            <LinearLayout
+                android:id="@+id/hard"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+                
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/hard"
+                    />
+                
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/hard_path"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    />
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/random"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/random"
+                    />
+
+                <TextView
+                    android:id="@+id/random_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/random"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/weekend"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/weekend"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/weekends"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hot_tickets"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/hot"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/hot_tickets"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_popular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:layout_marginHorizontal="16dp"
+            />
+            
+
+    </LinearLayout>
+    
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

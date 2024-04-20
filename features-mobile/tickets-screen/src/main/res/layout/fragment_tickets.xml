@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.TicketsFragment">
+
+    <FrameLayout
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/background_navigator_bar"
+        >
+        
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="@color/blue"
+            android:layout_gravity="center_vertical"
+            />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp">
+            
+            <TextView
+                android:id="@+id/route_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "Москва-Сочи"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/info_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "24 февраля, 1 пассажир"
+                android:layout_marginTop="23dp"
+                android:textColor="@color/grey6"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </FrameLayout>
+            
+    </FrameLayout>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="138dp"
+        android:clipToPadding="false"
+        android:layout_marginHorizontal="16dp"
+        />
+
+</FrameLayout>
